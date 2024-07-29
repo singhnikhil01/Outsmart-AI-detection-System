@@ -1,5 +1,4 @@
 import torch
-import numpy as np
 from nltk.tokenize import sent_tokenize
 
 class RewardCalculator:

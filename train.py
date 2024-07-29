@@ -10,12 +10,10 @@ from model import model, tokenizer
 from dataset import build_dataset
 from detector import AIContentDetector
 from reward_calculator import RewardCalculator
+from utils import collator
 
 nltk.download('punkt')
 tool = language_tool_python.LanguageTool('en-US')
-
-def collator(data):
-    return dict((key, [d[key] for d in data]) for key in data[0])
 
 dataset = build_dataset()
 ppo_trainer = PPOTrainer(
@@ -29,7 +27,7 @@ ppo_trainer = PPOTrainer(
 generation_kwargs = {
     "top_k": 0.0,
     "top_p": 1.0,
-    "max_new_tokens": 250,  # Limit the number of tokens generated as output
+    "max_new_tokens": 250,
     "do_sample": True,
     "pad_token_id": tokenizer.eos_token_id,
 }

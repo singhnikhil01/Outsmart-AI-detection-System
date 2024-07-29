@@ -1,5 +1,5 @@
-import torch
 from trl import PPOConfig
+import torch
 
 config = PPOConfig(
     model_name="gpt2",

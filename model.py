@@ -1,3 +1,4 @@
+import torch
 from transformers import AutoTokenizer
 from trl import AutoModelForCausalLMWithValueHead
 from config import config, device

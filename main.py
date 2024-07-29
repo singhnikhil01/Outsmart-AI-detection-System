@@ -17,6 +17,10 @@ def main():
     
     for package in required_packages:
         install(package)
-    
+
+def run_script(script_name):
+    subprocess.check_call([os.sys.executable, script_name])
+
 if __name__ == "__main__":
     main()
+    run_script('train.py')
