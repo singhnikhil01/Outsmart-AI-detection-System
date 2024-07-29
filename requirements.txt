@@ -1,0 +1,7 @@
+torch
+datasets
+transformers
+trl
+tqdm
+nltk
+language_tool_python
